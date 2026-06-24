@@ -1,0 +1,395 @@
+/* Core Reset & Workspace Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0b0f19;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 80% 20%, #1e1b4b 0%, #0f172a 100%);
+}
+
+/* Sidebar Editor Panel UI */
+.editor-panel {
+  width: 38%;
+  min-width: 420px;
+  max-width: 500px;
+  padding: 30px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.panel-header h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: linear-gradient(to right, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Premium Tab Controls */
+.tab-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 25px;
+  background-color: rgba(15, 23, 42, 0.6);
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-btn:hover {
+  color: #f1f5f9;
+}
+
+.tab-btn.active {
+  background-color: #1e293b;
+  color: #38bdf8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Layout Container */
+.resume-form {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 8px;
+}
+
+.resume-form::-webkit-scrollbar {
+  width: 6px;
+}
+.resume-form::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.form-section {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.form-section h3 {
+  color: #94a3b8;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Premium Field Styling */
+.resume-form input, .resume-form textarea, .control-group select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  background-color: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #f8fafc;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.resume-form input:focus, .resume-form textarea:focus, .control-group select:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.resume-form label, .control-group label {
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.resume-form textarea {
+  height: 85px;
+  resize: vertical;
+}
+
+/* Customizer Matrix Grid */
+.customizer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.control-group input[type="color"] {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 42px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.control-group input[type="file"] {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Action Control System Buttons */
+.download-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+  transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Section Add/Delete Interaction Elements */
+.dynamic-section-card {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+}
+
+.dynamic-section-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.section-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-title-input {
+  font-weight: 600 !important;
+  color: #38bdf8 !important;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  font-size: 15px;
+}
+
+.section-title-input:focus {
+  box-shadow: none !important;
+}
+
+.delete-section-btn {
+  background: rgba(244, 63, 94, 0.1);
+  border: none;
+  color: #f43f5e;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-section-btn:hover {
+  background: #f43f5e;
+  color: #ffffff;
+}
+
+.add-section-btn {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  color: #38bdf8;
+  border: 2px dashed rgba(56, 189, 248, 0.3);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-section-btn:hover {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: #38bdf8;
+}
+
+/* Document Canvas Preview Space Layout */
+.preview-panel {
+  flex-grow: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.resume-paper {
+  background-color: #ffffff;
+  width: 8.5in;
+  min-height: 11in;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Resume Document Internal Typography Styling */
+.resume-header {
+  padding: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile-img-container {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-text h1 {
+  margin: 0 0 6px 0;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.header-text p {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.resume-body {
+  padding: 40px;
+}
+
+.resume-section {
+  margin-bottom: 28px;
+}
+
+.resume-section h4 {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid;
+  padding-bottom: 4px;
+}
+
+.resume-section p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* Modern Split Sidebar System Adjustments */
+.split-layout-wrapper {
+  display: flex;
+  flex: 1;
+  min-height: 11in;
+}
+
+.resume-sidebar-panel {
+  width: 32%;
+  color: white;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sidebar-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.sidebar-contact {
+  font-size: 13px;
+  opacity: 0.9;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 15px;
+}
+
+.sidebar-contact p {
+  margin: 6px 0;
+}
+
+.resume-main-panel {
+  width: 68%;
+  padding: 40px 35px;
+  display: flex;
+  flex-direction: column;
+}
+

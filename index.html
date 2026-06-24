@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="src/assets/resume.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script>
+      // script to make the title of the page animated 
+      const title = "Resume Builder";
+      let index = 0;
+      function animateTitle() {
+        document.title = title.substring(0, index);
+        index = (index + 1) % (title.length + 1);
+        setTimeout(animateTitle, 500);
+      }
+      animateTitle();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
